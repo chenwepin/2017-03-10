@@ -40,7 +40,7 @@ namespace eSalex.Models
         {
             Models.Order result = new Order();
             result.CustId = "GSS";
-            result.CustName = "叡揚資訊";
+            result.CustName ="叡揚資訊";
             return result;
         }
 
