@@ -10,12 +10,12 @@ namespace eSalex.Controllers
     {
         // GET: Order
         public ActionResult Index()
-        {
-            Models.OrderService orderService = new Models.OrderService();
-            var order = orderService.GetOrderById("111");
-            ViewBag.CustId = order.CustId;
-            ViewBag.CustName = order.CustName;
-            return View();
+        {   
+            //Models.OrderService orderService = new Models.OrderService();
+            //var order = orderService.GetOrderById("111");
+            //ViewBag.CustId = order.CustId;
+            
+            return View(); 
         }
         public ActionResult Index2(string id)
         {
@@ -38,12 +38,21 @@ namespace eSalex.Controllers
         [HttpPost()]
         public ActionResult InsertOrder(Models.Order order)
         {
-            Models.OrderService orderService = new Models.OrderService();
-            orderService.InsertOrder(order);
-            return View("Index");
+            ViewBag.Desc1 = "我是ViewBag";
+            ViewData["Desc2"] = "我是ViewData";
+            TempData["Desc3"] = "我是 TempData";
+
+            return RedirectToAction("Index");
         }
-
-
+        [HttpGet()]
+        public JsonResult TestJson()
+        {
+            
+            var result = new Models.Order();
+            result.CustId = "GSS";
+            result.CustName = "叡揚資訊";
+            return this.Json(result, JsonRequestBehavior.AllowGet);
+        }
 
     }
 }
