@@ -2,6 +2,12 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/_LayoutPage.cshtml";
 }
+@{Html.RenderPartial("_SysDataPartial");}
+<br />
+@{Html.RenderPartial("_SysDataPartial");}
+<br />
+@{Html.RenderPartial("_SysDataPartial");}
+<br />
 <table class="table table-bordered table-striped">
     <tr>
         <td>測試</td>
@@ -17,4 +23,6 @@
         <td>456</td>
     </tr>
 </table>
+@{Html.RenderPartial("_SysDataPartial");}
+@{Html.RenderAction("", "");}
 
