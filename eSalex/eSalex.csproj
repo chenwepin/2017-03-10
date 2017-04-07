@@ -286,6 +286,7 @@
     <Content Include="Views\_LayoutPage.cshtml" />
     <Content Include="Views\LayoutTest\Index.cshtml" />
     <Content Include="Views\Shared\_SysDataPartial.cshtml" />
+    <Content Include="Views\Order\Index1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -296,6 +297,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eSaleModel\eSaleModel.csproj">
+      <Project>{71e1d0f8-db91-45a8-a01b-3ec420ad91a8}</Project>
+      <Name>eSaleModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eSaleService\eSaleService.csproj">
+      <Project>{60521873-2374-4885-9268-d5e4cdaeaada}</Project>
+      <Name>eSaleService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
